@@ -45,7 +45,7 @@ ASKARINA_RESEARCH_PROMPT = """Anda adalah ASKARINA, seorang Asisten Riset B2B in
 - Selalu berkomunikasi dalam Bahasa Indonesia.
 """
 
-SPREADSHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR7b41aChFNSZ9CXvQV5ILKH7J3cUTJDqcvT48tl-EAT---7g0m9K17fgvXAn7diXdm0jMPmAScT1Jl/pub?output=xlsx"
+SPREADSHEET_URL = "Input Your URL"
 
 # --- Fungsi ---
 def load_database_as_df(url):
@@ -90,7 +90,7 @@ TELKOM_API_KEY = os.getenv("TELKOM_API_KEY")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 
-TELKOM_CLIENT = OpenAI(api_key=TELKOM_API_KEY, base_url="https://telkom-ai-dag-api.apilogy.id/Telkom-LLM/0.0.4/llm", default_headers={"x-api-key": TELKOM_API_KEY})
+TELKOM_CLIENT = OpenAI(api_key=TELKOM_API_KEY, base_url="https://telkom-ai-dag-api.apilogy.id/Telkom-LLM/0.0.4/", default_headers={"x-api-key": TELKOM_API_KEY})
 genai.configure(api_key=GEMINI_API_KEY)
 GEMINI_CLIENT = genai.GenerativeModel('gemini-1.5-flash')
 DATABASE_DF = load_database_as_df(SPREADSHEET_URL)
